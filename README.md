@@ -16,5 +16,4 @@ Features:
 
 Python Calculator Runs in the command line
 
-make sure python calculator is set as "Exicutable as Program" in file properties
-
+Make sure python calculator is set as "Executable as Program" in file properties
