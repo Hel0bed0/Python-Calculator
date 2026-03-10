@@ -12,7 +12,9 @@ Features:
 
 5. Percentage
 
-6. Exit Command
+6. Back Function
+
+7. Exit Command
 
 Python Calculator Runs in the command line
 
