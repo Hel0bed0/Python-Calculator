@@ -1,19 +1,14 @@
 #!/usr/bin/env python3
+#↑↑ use python3 to run code ↑↑
+
 #Time
 import time
 #Define values
-n3 = 4
-n4 = 5
-n5 = 2
-n6 = 1
-n7 = 0
-n8 = 6
+n3 = 3
 #n9 is percentage
 n10 = 100
-n11 = 7
-n12 = 3
 #Loop 
-while(n3 == 4):
+while(n3 == 3):
 #UI Loop
     while(True):
     #UI 
@@ -26,24 +21,24 @@ while(n3 == 4):
              "6. Exit\n")
 
 #Selector
-        sel = int(input("Enter 1 - 6: "))
-        if sel > n8 :
+        sel = int(input("Enter 1 - 6 (crashes if NaN): "))
+        if sel > 6 :
             print("IDK how to do that.")
-        elif sel < n6 :
+        elif sel < 1 :
             print("IDK how to do that.")
-        elif sel == n8 :
+        elif sel == 6 :
             ex = int(input("Are you sure you want to exit? Enter 1 to exit: "))
-            if ex == n6 :
+            if ex == 1 :
                 exit()
-        elif sel < n8 :
+        elif sel < 6 :
             n1 = float(input("First Number (crashes if NaN): "))
             n2 = float(input("Second Number (crashes if NaN): "))
             break
-        
-#Better Loop (pt1)
-    if sel < n6 :
+  
+#Valid Input Checker 
+    if sel < 1 :
         print ("...")
-    elif sel > n4 :
+    elif sel > 5 :
         print ("...")
 
 #Percentages
@@ -85,32 +80,33 @@ while(n3 == 4):
         print(n1, "%", n2, "=", per(n1, n9))
 #Print "Done"
 
-    if sel > n7 :
+    if sel > 0 :
         print("Done")
-    elif sel < n8 :
+    elif sel < 6 :
         print("Done")
 
-#Better Loop (pt2)
+#Better Loop
     while(True):
     
        time.sleep(0.5)
        mr = int(input("Another calculation? Press 1 to calculate more, press 2 to exit, and 3 to sleep for 10 sec: "))
-       if mr == n6 :
+       if mr == 1 :
            time.sleep(0.15)
            print("OK")
            break
-    # If input invalid
-       elif mr > n12 :
+    #Valid Input Checker and Exit Function
+       elif mr == 10 :
+           print("Easter Egg")
+       elif mr > 3 :
            print("Enter Only 1, 2 or 3")
-       elif mr < n6 :
-           print("Enter Only 1, 2 or 3")
-            
-       elif mr == n5 :
+       elif mr < 1 :
+           print("Enter Only 1, 2 or 3")  
+       elif mr == 2 :
           sr = int(input("Are you sure you want to exit? Enter 1 to exit: "))
-          if sr == n6 :
+          if sr == 1 :
             time.sleep(0.15)
             exit()
-       elif mr == n12 :
+       elif mr == 3 :
             time.sleep(10)
 
        time.sleep(0.5)
