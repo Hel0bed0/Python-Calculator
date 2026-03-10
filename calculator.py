@@ -33,9 +33,12 @@ while(n3 == 3):
                 exit()
         elif sel < 6 :
             while(True):
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
                 n1 = float(input("First Number (crashes if NaN): "))
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
                 n2 = float(input("Second Number (crashes if NaN): "))
                 #Back function
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
                 ba = int(input("1 to calculate, other to cancel: "))
                 if ba == 1 : 
                     break
@@ -67,7 +70,9 @@ while(n3 == 3):
     def per(n1, n9):
         return n1 * n9
     
-#Output
+#Breakup UI to be nicer on eyes
+    print("////////////////////////////////////////////////////////////////////")
+#Output cal ans
     time.sleep(0.15)
 
     if sel == 1:
@@ -84,6 +89,8 @@ while(n3 == 3):
     
     elif sel == 5:
         print(n1, "%", n2, "=", per(n1, n9))
+#Breakup UI to be nicer on eyes
+    print("////////////////////////////////////////////////////////////////////")
 #Print "Done"
 
     if sel > 0 :
@@ -91,28 +98,40 @@ while(n3 == 3):
     elif sel < 6 :
         print("Done")
 
-#Better Loop
+#Better Loop and next task ask
     while(True):
     
        time.sleep(0.15)
+       #Breakup UI to be nicer on eyes
+       print("------------------------------------------------------------------\n"
+             "------------------------------------------------------------------\n")
+             
+       #Ask for command
        print("Another calculation?\n"
              "Press 1 to calculate more\n" 
              "Press 2 to exit\n" 
              "Press 3 to sleep for 10 sec\n")
-        
-       mr = int(input("Enter Number: "))
+             
+       #Command enter
+       mr = int(input("Enter 1 - 3: "))
        if mr == 1 :
            time.sleep(0.15)
-           print("OK")
+           print("------------------------------------------------------------------\n"
+                 "OK\n")
            time.sleep(0.4)
            break
+           
     #Valid Input Checker and Exit Function
        elif mr == 10 :
-           print("Easter Egg")
+           print("Easter Egg :]")
        elif mr > 3 :
-           print("Enter Only 1, 2 or 3")
+           print("------------------------\n"
+                 "Enter Only 1, 2 or 3\n"
+                 "------------------------\n")
        elif mr < 1 :
-           print("Enter Only 1, 2 or 3")  
+           print("------------------------\n"
+                 "Enter Only 1, 2 or 3\n"
+                 "------------------------\n") 
        elif mr == 2 :
           sr = int(input("Are you sure you want to exit? Enter 1 to exit: "))
           if sr == 1 :
