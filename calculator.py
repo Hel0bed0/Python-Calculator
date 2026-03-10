@@ -21,6 +21,7 @@ while(n3 == 3):
              "6. Exit\n")
 
 #Selector
+        time.sleep(0.15)
         sel = int(input("Enter 1 - 6 (crashes if NaN): "))
         if sel > 6 :
             print("IDK how to do that.")
@@ -31,8 +32,13 @@ while(n3 == 3):
             if ex == 1 :
                 exit()
         elif sel < 6 :
-            n1 = float(input("First Number (crashes if NaN): "))
-            n2 = float(input("Second Number (crashes if NaN): "))
+            while(True):
+                n1 = float(input("First Number (crashes if NaN): "))
+                n2 = float(input("Second Number (crashes if NaN): "))
+                #Back function
+                ba = int(input("1 to calculate, other to cancel: "))
+                if ba == 1 : 
+                    break
             break
   
 #Valid Input Checker 
@@ -88,11 +94,17 @@ while(n3 == 3):
 #Better Loop
     while(True):
     
-       time.sleep(0.5)
-       mr = int(input("Another calculation? Press 1 to calculate more, press 2 to exit, and 3 to sleep for 10 sec: "))
+       time.sleep(0.15)
+       print("Another calculation?\n"
+             "Press 1 to calculate more\n" 
+             "Press 2 to exit\n" 
+             "Press 3 to sleep for 10 sec\n")
+        
+       mr = int(input("Enter Number: "))
        if mr == 1 :
            time.sleep(0.15)
            print("OK")
+           time.sleep(0.4)
            break
     #Valid Input Checker and Exit Function
        elif mr == 10 :
