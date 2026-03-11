@@ -14,7 +14,9 @@ Features:
 
 6. Back Function
 
-7. Exit Command
+7. Unit Conversion
+
+8. Exit Command
 
 Python Calculator Runs in the command line
 
