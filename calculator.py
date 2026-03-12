@@ -162,14 +162,18 @@ while(True):
     if cms1 == 2 :
         time.sleep(0.15)
         sel1 = int(input("Enter 1 - 7 (crashes if NaN): "))
-        if sel1 > 6 :
-            print("IDK how to do that.")
-        elif sel1 < 1 :
-            print("IDK how to do that.")
-        elif sel1 == 7 :
+
+        if sel1 == 7 :
             ex = int(input("Are you sure you want to exit? Enter 1 to exit: "))
             if ex == 1 :
                 exit()
+                
+        elif sel1 > 6 :
+            print("IDK how to do that.")
+            
+        elif sel1 < 1 :
+            print("IDK how to do that.")
+            
         elif sel1 == 6 :
             print("Fractions: \n"
                   "1. Common Denominator \n"
