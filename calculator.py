@@ -64,91 +64,125 @@ while(True):
 
     #Selector (Con)
     if cms1 == 1 :
-        print("What do you want to do? \n"
-              "1. Convert Celsius \n"
-              "2. Convert Metre \n"
-              "3. Convert KPH \n"
-              "4. Convert MPH \n"
-              "5. Convert Feet \n"
-              "6. Convert Fahrenheit \n"
-              "7. Convert Yard \n"
-              "8. Convert Inch \n"
-              "9. Convert Kelvin \n")
+        print("_________ \n"
+              "|CONVERT| \n"
+              "‾‾‾‾‾‾‾‾‾ \n")
+              
+        print("Unit Type? \n"
+              "1. Temp \n"
+              "2. Distance \n"
+              "3. Speed \n")
+        sel5 = int(input("Enter Value: "))
+        if sel5 == 1 :
+            print("What do you want to do? \n"
+                "1. Convert Celsius \n"
+                "2. Convert Fahrenheit \n"
+                "3. Convert Kelvin \n")
+                
+        elif sel5 == 2 :
+            print("What do you want to do? \n"
+                "1. Convert Metre \n"
+                "2. Convert Feet \n"
+                "3. Convert Yard \n"
+                "4. Convert Inch \n")
+        
+        elif sel5 == 3 :
+            print("What do you want to do? \n"
+                  "1. Convert KPH \n"
+                  "2. Convert MPH \n")
+                  
         if cms1 == 1 :      
-            sel2 = int(input("Enter First Unit (1 - 9) (crashes in NaN): "))
+            sel2 = int(input("Enter First Unit (crashes in NaN): "))
             print("/////////////////////////////////////")
+            #debug
+            if debug == 1 :
+                print("debug:]")
+    
             #Subselect
             while(True):
+                if sel5 == 1 :
                     if sel2 == 1 :
                         print("Convert to \n"
                              "From Celsius \n"
                              "1. Kelvin \n"
                              "2. Fahrenheit \n")
+                             
                     elif sel2 == 2 :
+                        print("Convert to \n"
+                            "From Fahrenheit \n"
+                              "1. Celsius \n"
+                              "2. Kelvin \n")
+                             
+                    elif sel2 == 3 :
+                        print("Convert to \n"
+                            "From Kelvin \n"
+                              "1. Celsius \n"
+                              "2. Fahrenheit \n")
+                             
+                elif sel5 == 2 :
+                    if sel2 == 1 :
                         print("Convert to \n"
                             "From Metre \n"
                             "1. Feet \n"
                             "2. Yard \n")
-                    elif sel2 == 3 :
-                        print("Convert to \n"
-                            "From KPH \n"
-                              "1. MPH \n"
-                              "2. M/S \n"
-                              "3. F/S \n")
-                    elif sel2 == 4 :
-                        print("Convert to \n"
-                            "From MPH \n"
-                              "1. KPH \n"
-                              "2. Ft/S \n"
-                              "3. M/S \n")
-                    elif sel2 == 5 :
+                    elif sel2 == 2 :
                         print("Convert to \n"
                             "From Feet \n"
                               "1. Metre \n"
                               "2. Inch \n"
                               "3. Centimetre \n"
                               "4. Yard \n")
-                    elif sel2 == 6 :
-                        print("Convert to \n"
-                            "From Fahrenheit \n"
-                              "1. Celsius \n"
-                              "2. Kelvin \n")
-                    elif sel2 == 7 :
+                    elif sel2 == 3 :
                         print("Convert to \n"
                             "From Yard \n"
                               "1. Feet \n"
                               "2. Metre \n"
                               "3. Mile \n")
-                    elif sel2 == 8 :
+                    elif sel2 == 4 :
                         print("Convert to \n"
                             "From Inch \n"
                               "1. Feet \n"
                               "2. Metre \n")
-                    elif sel2 == 9 :
+                              
+                elif sel5 == 3 :
+                    if sel2 == 1 :
                         print("Convert to \n"
-                            "From Kelvin \n"
-                              "1. Celsius \n"
-                              "2. Fahrenheit \n")
-                    sel3 =int(input("Enter Second Unit: "))
-                    print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
-                    print("OK:",sel3)
-                    time.sleep(0.5)
-                    n1 = float(input("Enter Value: "))
-                    print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
-                    ok2 = int(input("1 - Convert - Other - Cancel: "))
-                    if ok2 == 1 :
-                        time.sleep(0.2)
-                        break
-                    #debug
-                    if debug == 1 :
-                        print("debug:]")
+                            "From KPH \n"
+                              "1. MPH \n"
+                              "2. M/S \n"
+                              "3. F/S \n")   
+                    elif sel2 == 2 :
+                        print("Convert to \n"
+                            "From MPH \n"
+                              "1. KPH \n"
+                              "2. Ft/S \n"
+                              "3. M/S \n")
+                              
+            
+                #ask value           
+                sel3 = int(input("Enter Second Unit: "))
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+                print("OK:",sel3)
+                time.sleep(0.5)
+                n1 = float(input("Enter Value: "))
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+                ok2 = int(input("1 - Convert - Other - Cancel: "))
+                if ok2 == 1 :
+                    time.sleep(0.2)
+                    break
+                #debug
+            if debug == 1 :
+                print("debug:]")
         #Tell selected
-        print(sel2,"|",sel3,)
+        print(sel5, "|", sel2,"|",sel3,)
 
 #Calculator sel master
     if debug == 1 :
         print("debug:]")
     if cms1 == 2 :
+        print("___________ \n"
+              "|CALCULATE| \n"
+              "‾‾‾‾‾‾‾‾‾‾‾ \n")
         print("What do you want to do? \n"
              "1. Addition\n"
              "2. Subtraction\n"
@@ -157,29 +191,29 @@ while(True):
              "5. Percentage\n"
              "6. Fraction\n"
              "7. Exit\n")
-    #Selector (Cal)
+    #Selector secondary (Cal)
               
     if cms1 == 2 :
         time.sleep(0.15)
         sel1 = int(input("Enter 1 - 7 (crashes if NaN): "))
-
+        #Exit are-you-sure
         if sel1 == 7 :
             ex = int(input("Are you sure you want to exit? Enter 1 to exit: "))
             if ex == 1 :
                 exit()
-                
+        #Valid input checker
         elif sel1 > 6 :
             print("IDK how to do that.")
-            
+        
         elif sel1 < 1 :
             print("IDK how to do that.")
-            
+        #Fractions selector    
         elif sel1 == 6 :
             print("Fractions: \n"
                   "1. Common Denominator \n"
                   "2. Percentage \n")
             sel4 = int(input("Enter 1 - 3 : "))
-            
+        #user number input
         while(True):
             print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
             n1 = float(input("First Number (crashes if NaN): "))
@@ -235,7 +269,7 @@ while(True):
             
         def perfra(n1, n2):
             return n10 * n1/n2
-            
+#Fractions common denominator is built into the print function
 #Converter
     if cms1 == 1 :
     
@@ -311,6 +345,8 @@ while(True):
             
         def ktf1(n1, ktf):
             return (n1 - ctk) * ktf2 + ktf3
+            
+
 #Breakup UI to be nicer on eyes
     print("////////////////////////////////////////////////////////////////////")
 #Output ans
@@ -330,7 +366,7 @@ while(True):
     
         elif sel1 == 5:
             print(n1, "%", n2, "=", per(n1, np))
-            
+            #Fractions
         elif sel1 == 6:
             if sel4 == 1:
                 print("Fractions (Common Denominator)", n1,"/",n2, "=", Fraction(n1/n2).limit_denominator(1000))
@@ -338,72 +374,79 @@ while(True):
                 print( "Fractions (Percentage)", n1 ,"/", n2 , "=", perfra(n1, n2),"%", )
 
     if cms1 == 1 :
+        if sel5 == 1:
+    
+            if sel2 == 1:
+                if sel3 == 1 :
+                    print(n1, "Celsius is", ctka(n1, ctk), "Kelvin")
+                elif sel3 == 2 :
+                    print(n1, "Celsius is", ctfa1(n1, ctfm, ctfa), "Farenheit",)
 
-        if sel2 == 1:
-            if sel3 == 1 :
-                print(n1, "Celsius is", ctka(n1, ctk), "Kelvin")
-            elif sel3 == 2 :
-                print(n1, "Celsius is", ctfa1(n1, ctfm, ctfa), "Farenheit",)
-            
-        elif sel2 == 2:
-            if sel3 == 1 :
-                print(n1, "Meter is", mtf1(n1, mtf), "Feet" ,)
-            elif sel3 == 2 :
-                print(n1, "Meter is", mty1(n1, mty), "Yards" ,)
-                
-        elif sel2 == 3:
-            if sel3 == 1 :
-                print(n1, "KPH is", khtms1(n1, khtms), "M/S" ,)
-            elif sel3 == 2 :
-                print(n1, "KPH is", khtmh1(n1, khtmh), "MPH" ,)
-            elif sel3 == 3 :
-                print(n1, "KPH is", khtfts1(n1, khtfts), "Ft/S" ,)
-                
-        elif sel2 == 4:
-            if sel3 == 1 :
-                print(n1, "MPH is", mhtkh1(n1, mhtkh), "KPH" ,)
-            elif sel3 == 2 :
-                print(n1, "MPH is", mhtfs1(n1, mhtfs), "Ft/S" ,)
-            elif sel3 == 3 :
-                print(n1, "MPH is", mhtms1(n1, mhtms), "M/S" ,)
-            
+            elif sel2 == 2:
+                if sel3 == 1 :
+                    print(n1, "Kelvin is", ktc1(n1, ctk), "Celsius" ,)
+                elif sel3 == 2 :
+                    print(n1, "Kelvin is", ktf1(n1, ktf), "Fahrenheit" ,)
+                    
+            elif sel2 == 3:
+                if sel3 == 1 :
+                    print(n1, "Fahrenheit is", ftc1(n1, ftcs, ftcd), "Celsius" ,)
+                if sel3 == 2 :
+                    print(n1, "Fahrenheit is", ftk1(n1, ftcs, ftcd, ctk), "Kelvin" ,)
         
-        elif sel2 == 5:
-            if sel3 == 1 :
-                print(n1,  "Feet is", ftm1(n1, ftm), "Metre" ,)
-            elif sel3 == 2:
-                print(n1, "Feet is", fti1(n1, ftm), "Inch" ,)
-            elif sel3 == 3:
-                print(n1, "Feet is", ftcm1(n1, ftcm), "Centimetre" ,)
-            elif sel3 == 4:
-                print(n1, "Feet is", fty1(n1, fty), "Yard" ,)
+        elif sel5 == 2:
+            if sel2 == 1:
+                if sel3 == 1 :
+                    print(n1, "Meter is", mtf1(n1, mtf), "Feet" ,)
+                elif sel3 == 2 :
+                    print(n1, "Meter is", mty1(n1, mty), "Yards" ,)
                 
-        elif sel2 == 6:
-            if sel3 == 1 :
-                print(n1, "Fahrenheit is", ftc1(n1, ftcs, ftcd), "Celsius" ,)
-            if sel3 == 2 :
-                print(n1, "Fahrenheit is", ftk1(n1, ftcs, ftcd, ctk), "Kelvin" ,)
-                
-        elif sel2 == 7:
-            if sel3 == 1 :
-                print(n1, "Yard is", ytf1(n1, ytf), "Feet" ,)
-            elif sel3 == 2 :
-                print(n1, "Yard is", ytm1(n1, ytm), "Metre" ,)
-            if sel3 == 3 :
-                print(n1, "Yard is", ytmi1(n1, ytmi), "Mile" ,)
-                
-        elif sel2 == 8:
-            if sel3 == 1 :
-                print(n1, "Inch is", itf1(n1, itf), "Feet" ,)
-            elif sel3 == 2 :
-                print(n1, "Inch is", itm1(n1, itm), "Metre" ,)
-                
-        elif sel2 == 9:
-            if sel3 == 1 :
-                print(n1, "Kelvin is", ktc1(n1, ctk), "Celsius" ,)
-            elif sel3 == 2 :
-                print(n1, "Kelvin is", ktf1(n1, ktf), "Fahrenheit" ,)
         
+            elif sel2 == 2:
+                if sel3 == 1 :
+                    print(n1,  "Feet is", ftm1(n1, ftm), "Metre" ,)
+                elif sel3 == 2:
+                    print(n1, "Feet is", fti1(n1, ftm), "Inch" ,)
+                elif sel3 == 3:
+                    print(n1, "Feet is", ftcm1(n1, ftcm), "Centimetre" ,)
+                elif sel3 == 4:
+                    print(n1, "Feet is", fty1(n1, fty), "Yard" ,)
+                
+                
+            elif sel2 == 3:
+                if sel3 == 1 :
+                    print(n1, "Yard is", ytf1(n1, ytf), "Feet" ,)
+                elif sel3 == 2 :
+                    print(n1, "Yard is", ytm1(n1, ytm), "Metre" ,)
+                if sel3 == 3 :
+                    print(n1, "Yard is", ytmi1(n1, ytmi), "Mile" ,)
+                
+            elif sel2 == 4:
+                if sel3 == 1 :
+                    print(n1, "Inch is", itf1(n1, itf), "Feet" ,)
+                elif sel3 == 2 :
+                    print(n1, "Inch is", itm1(n1, itm), "Metre" ,)
+                    
+        elif sel5 == 3:
+            
+            if sel2 == 3:
+                if sel3 == 1 :
+                    print(n1, "KPH is", khtms1(n1, khtms), "M/S" ,)
+                elif sel3 == 2 :
+                    print(n1, "KPH is", khtmh1(n1, khtmh), "MPH" ,)
+                elif sel3 == 3 :
+                    print(n1, "KPH is", khtfts1(n1, khtfts), "Ft/S" ,)
+                    
+            elif sel2 == 2:
+                if sel3 == 1 :
+                    print(n1, "MPH is", mhtkh1(n1, mhtkh), "KPH" ,)
+                elif sel3 == 2 :
+                    print(n1, "MPH is", mhtfs1(n1, mhtfs), "Ft/S" ,)
+                elif sel3 == 3 :
+                    print(n1, "MPH is", mhtms1(n1, mhtms), "M/S" ,)
+            
+                
+
 #Breakup UI to be nicer on eyes
     print("////////////////////////////////////////////////////////////////////")
 #Print "Done"
