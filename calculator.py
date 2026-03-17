@@ -35,6 +35,10 @@ ktf = 0
 ktf2 = 1.8
 ktf3 = 32
 n10 = 100
+mstkh = 3.6
+mstmh = 2.236936
+fstkh = 1.09728
+fstmh = 0.6818182
 #np is percentage
 #debug
 
@@ -74,22 +78,24 @@ while(True):
               "3. Speed \n")
         sel5 = int(input("Enter Value: "))
         if sel5 == 1 :
-            print("What do you want to do? \n"
+            print("Convert from? \n"
                 "1. Convert Celsius \n"
                 "2. Convert Fahrenheit \n"
                 "3. Convert Kelvin \n")
                 
         elif sel5 == 2 :
-            print("What do you want to do? \n"
+            print("Convert from? \n"
                 "1. Convert Metre \n"
                 "2. Convert Feet \n"
                 "3. Convert Yard \n"
                 "4. Convert Inch \n")
         
         elif sel5 == 3 :
-            print("What do you want to do? \n"
+            print("Convert from? \n"
                   "1. Convert KPH \n"
-                  "2. Convert MPH \n")
+                  "2. Convert MPH \n"
+                  "3. Convert M/S \n"
+                  "4. Convert Ft/S \n")
                   
         if cms1 == 1 :      
             sel2 = int(input("Enter First Unit (crashes in NaN): "))
@@ -157,13 +163,27 @@ while(True):
                               "1. KPH \n"
                               "2. Ft/S \n"
                               "3. M/S \n")
-                              
+                    elif sel2 == 3 :
+                        print("Convert to \n"
+                            "From M/S \n"
+                              "1. KPH \n"
+                              "2. MPH \n"
+                              "3. Ft/S \n")
+                    elif sel2 == 4 :
+                        print("Convert to \n"
+                            "From Ft/S \n"
+                              "1. KPH \n"
+                              "2. MPH \n"
+                              "3. M/S \n")
             
                 #ask value           
                 sel3 = int(input("Enter Second Unit: "))
                 print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
-                print("OK:",sel3)
-                time.sleep(0.5)
+                print("|                                                                  |")
+                print("                       OK:",sel3)
+                print("|                                                                  |")
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+                print("Value to Convert: ")
                 n1 = float(input("Enter Value: "))
                 print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
                 ok2 = int(input("1 - Convert - Other - Cancel: "))
@@ -212,7 +232,7 @@ while(True):
             print("Fractions: \n"
                   "1. Common Denominator \n"
                   "2. Percentage \n")
-            sel4 = int(input("Enter 1 - 3 : "))
+            sel4 = int(input("Enter 1 - 2 : "))
         #user number input
         while(True):
             print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
@@ -346,6 +366,24 @@ while(True):
         def ktf1(n1, ktf):
             return (n1 - ctk) * ktf2 + ktf3
             
+        def mstkh1(n1, mstkh):
+            return n1 * mstkh
+            
+        def mstmh1(n1, mstmh):
+            return n1 * mstmh
+            
+        def mstfs1(n1, mtf):
+            return n1 * mtf
+            
+        def fstms1(n1, ftm):
+            return n1 * ftm
+            
+        def fstkh1(n1, fstkh):
+            return n1 * fstkh
+            
+        def fstmh1(n1, fstmh):
+            return n1 * fstmh
+            
 
 #Breakup UI to be nicer on eyes
     print("////////////////////////////////////////////////////////////////////")
@@ -429,7 +467,7 @@ while(True):
                     
         elif sel5 == 3:
             
-            if sel2 == 3:
+            if sel2 == 1:
                 if sel3 == 1 :
                     print(n1, "KPH is", khtms1(n1, khtms), "M/S" ,)
                 elif sel3 == 2 :
@@ -444,6 +482,22 @@ while(True):
                     print(n1, "MPH is", mhtfs1(n1, mhtfs), "Ft/S" ,)
                 elif sel3 == 3 :
                     print(n1, "MPH is", mhtms1(n1, mhtms), "M/S" ,)
+                    
+            elif sel2 == 3:
+                if sel3 == 1 :
+                    print(n1, "M/S is", mstkh1(n1, mstkh), "KPH" ,)
+                elif sel3 == 2 :
+                    print(n1, "M/S is", mstmh1(n1, mstmh), "MPH" ,)
+                elif sel3 == 3 :
+                    print(n1, "M/S is", mstfs1(n1, mtf), "Ft/S" ,)
+                    
+            elif sel2 == 4:
+                if sel3 == 1 :
+                    print(n1, "Ft/S is", fstkh1(n1, fstkh), "KPH" ,)
+                elif sel3 == 2 :
+                    print(n1, "Ft/S is", fstmh1(n1, fstmh), "MPH" ,)
+                elif sel3 == 3 :
+                    print(n1, "Ft/S is", fstms1(n1, ftm), "M/S" ,)
             
                 
 
@@ -506,3 +560,5 @@ while(True):
       print("debug:]")
     if crs == 1 :
         exit()
+        
+# Made by: Helobedo
