@@ -297,93 +297,7 @@ while(True):
         if debug == 1 :
             print("debug:]")
             
-        def ctka(n1, ctk):
-            return n1 + ctk
-            
-        def ctfa1(n1, ctfm, ctfa):
-            return (n1 * ctfm) + ctfa
-        
-        def mtf1(n1, mtf):
-            return n1 * mtf
-        
-        def mty1(n1, mty):
-            return n1 * mty
-            
-        def khtms1(n1, khtms):
-            return n1 * khtms
-            
-        def khtmh1(n1, khtmh):
-            return n1 * khtmh
-            
-        def khtfts1(n1, khtfts):
-            return n1 * khtfts
-            
-        def mhtkh1(n1, mhtkh):
-            return n1 * mhtkh
-            
-        def mhtfs1(n1, mhtfs):
-            return n1 * mhtfs
-        
-        def mhtms1(n1, mhtms):
-            return n1 * mhtms
-            
-        def ftm1(n1, ftm):
-            return n1 * ftm
-        
-        def fti1(n1, fti):
-            return n1 * fti
-        
-        def ftcm1(n1, ftcm):
-            return n1 * ftcm
-        
-        def ftc1(n1, ftcs, ftcd):
-            return n1 - ftcd * ftcs
-            
-        def ftk1(n1, ftcs, ftcd, ctk):
-            return (n1 - ftcs) * ftcd + ctk
-            
-        def ytf1(n1, ytf):
-            return n1 * ytf
-        
-        def fty1(n1, fty):
-            return n1 * fty
-            
-        def ytm1(n1, ytm):
-            return n1 * ytm
-            
-        def ytmi1(n1, ytmi):
-            return n1 * ytmi
-            
-        def itf1(n1, itf):
-            return n1 / itf
-            
-        def itm1(n1, itm):
-            return n1 * itm
-            
-        def ktc1(n1, ctk):
-            return n1 - ctk
-            
-        def ktf1(n1, ktf):
-            return (n1 - ctk) * ktf2 + ktf3
-            
-        def mstkh1(n1, mstkh):
-            return n1 * mstkh
-            
-        def mstmh1(n1, mstmh):
-            return n1 * mstmh
-            
-        def mstfs1(n1, mtf):
-            return n1 * mtf
-            
-        def fstms1(n1, ftm):
-            return n1 * ftm
-            
-        def fstkh1(n1, fstkh):
-            return n1 * fstkh
-            
-        def fstmh1(n1, fstmh):
-            return n1 * fstmh
-            
+#convert is in-print
 
 #Breakup UI to be nicer on eyes
     print("////////////////////////////////////////////////////////////////////")
@@ -416,88 +330,88 @@ while(True):
     
             if sel2 == 1:
                 if sel3 == 1 :
-                    print(n1, "Celsius is", ctka(n1, ctk), "Kelvin")
+                    print(n1, "Celsius is", n1 + ctk, "Kelvin")
                 elif sel3 == 2 :
-                    print(n1, "Celsius is", ctfa1(n1, ctfm, ctfa), "Farenheit",)
+                    print(n1, "Celsius is", (n1 * ctfm) + ctfa, "Farenheit",)
 
             elif sel2 == 2:
                 if sel3 == 1 :
-                    print(n1, "Kelvin is", ktc1(n1, ctk), "Celsius" ,)
+                    print(n1, "Kelvin is", (n1 - ctk), "Celsius" ,)
                 elif sel3 == 2 :
-                    print(n1, "Kelvin is", ktf1(n1, ktf), "Fahrenheit" ,)
+                    print(n1, "Kelvin is", (n1 - ctk) * ktf2 + ktf3, "Fahrenheit" ,)
                     
             elif sel2 == 3:
                 if sel3 == 1 :
-                    print(n1, "Fahrenheit is", ftc1(n1, ftcs, ftcd), "Celsius" ,)
+                    print(n1, "Fahrenheit is", n1 - ftcd * ftcs, "Celsius" ,)
                 if sel3 == 2 :
-                    print(n1, "Fahrenheit is", ftk1(n1, ftcs, ftcd, ctk), "Kelvin" ,)
+                    print(n1, "Fahrenheit is", (n1 - ftcs) * ftcd + ctk, "Kelvin" ,)
         
         elif sel5 == 2:
             if sel2 == 1:
                 if sel3 == 1 :
-                    print(n1, "Meter is", mtf1(n1, mtf), "Feet" ,)
+                    print(n1, "Meter is", n1 * mtf, "Feet" ,)
                 elif sel3 == 2 :
-                    print(n1, "Meter is", mty1(n1, mty), "Yards" ,)
+                    print(n1, "Meter is", n1 * mty, "Yards" ,)
                 
         
             elif sel2 == 2:
                 if sel3 == 1 :
-                    print(n1,  "Feet is", ftm1(n1, ftm), "Metre" ,)
+                    print(n1,  "Feet is", n1 * ftm, "Metre" ,)
                 elif sel3 == 2:
-                    print(n1, "Feet is", fti1(n1, ftm), "Inch" ,)
+                    print(n1, "Feet is", n1 * fti, "Inch" ,)
                 elif sel3 == 3:
-                    print(n1, "Feet is", ftcm1(n1, ftcm), "Centimetre" ,)
+                    print(n1, "Feet is", n1 * ftcm, "Centimetre" ,)
                 elif sel3 == 4:
-                    print(n1, "Feet is", fty1(n1, fty), "Yard" ,)
+                    print(n1, "Feet is", n1 * fty, "Yard" ,)
                 
                 
             elif sel2 == 3:
                 if sel3 == 1 :
-                    print(n1, "Yard is", ytf1(n1, ytf), "Feet" ,)
+                    print(n1, "Yard is", n1 * ytf, "Feet" ,)
                 elif sel3 == 2 :
-                    print(n1, "Yard is", ytm1(n1, ytm), "Metre" ,)
+                    print(n1, "Yard is", n1 * ytm, "Metre" ,)
                 if sel3 == 3 :
-                    print(n1, "Yard is", ytmi1(n1, ytmi), "Mile" ,)
+                    print(n1, "Yard is", n1 * ytmi, "Mile" ,)
                 
             elif sel2 == 4:
                 if sel3 == 1 :
-                    print(n1, "Inch is", itf1(n1, itf), "Feet" ,)
+                    print(n1, "Inch is", n1 / itf, "Feet" ,)
                 elif sel3 == 2 :
-                    print(n1, "Inch is", itm1(n1, itm), "Metre" ,)
+                    print(n1, "Inch is", n1 * itm, "Metre" ,)
                     
         elif sel5 == 3:
             
             if sel2 == 1:
                 if sel3 == 1 :
-                    print(n1, "KPH is", khtms1(n1, khtms), "M/S" ,)
+                    print(n1, "KPH is", n1 * khtms, "M/S" ,)
                 elif sel3 == 2 :
-                    print(n1, "KPH is", khtmh1(n1, khtmh), "MPH" ,)
+                    print(n1, "KPH is", n1 * khtmh, "MPH" ,)
                 elif sel3 == 3 :
-                    print(n1, "KPH is", khtfts1(n1, khtfts), "Ft/S" ,)
+                    print(n1, "KPH is", n1 * khtfts, "Ft/S" ,)
                     
             elif sel2 == 2:
                 if sel3 == 1 :
-                    print(n1, "MPH is", mhtkh1(n1, mhtkh), "KPH" ,)
+                    print(n1, "MPH is", n1 * mhtkh, "KPH" ,)
                 elif sel3 == 2 :
-                    print(n1, "MPH is", mhtfs1(n1, mhtfs), "Ft/S" ,)
+                    print(n1, "MPH is", n1 * mhtfs, "Ft/S" ,)
                 elif sel3 == 3 :
-                    print(n1, "MPH is", mhtms1(n1, mhtms), "M/S" ,)
+                    print(n1, "MPH is", n1 * mhtms, "M/S" ,)
                     
             elif sel2 == 3:
                 if sel3 == 1 :
-                    print(n1, "M/S is", mstkh1(n1, mstkh), "KPH" ,)
+                    print(n1, "M/S is", n1 * mstkh, "KPH" ,)
                 elif sel3 == 2 :
-                    print(n1, "M/S is", mstmh1(n1, mstmh), "MPH" ,)
+                    print(n1, "M/S is", n1 * mstmh, "MPH" ,)
                 elif sel3 == 3 :
-                    print(n1, "M/S is", mstfs1(n1, mtf), "Ft/S" ,)
+                    print(n1, "M/S is", n1 * mtf, "Ft/S" ,)
                     
             elif sel2 == 4:
                 if sel3 == 1 :
-                    print(n1, "Ft/S is", fstkh1(n1, fstkh), "KPH" ,)
+                    print(n1, "Ft/S is", n1 * fstkh, "KPH" ,)
                 elif sel3 == 2 :
-                    print(n1, "Ft/S is", fstmh1(n1, fstmh), "MPH" ,)
+                    print(n1, "Ft/S is", n1 * fstmh, "MPH" ,)
                 elif sel3 == 3 :
-                    print(n1, "Ft/S is", fstms1(n1, ftm), "M/S" ,)
+                    print(n1, "Ft/S is", n1 * ftm, "M/S" ,)
             
                 
 
@@ -516,7 +430,7 @@ while(True):
             print("Done")
 #Better Loop and next task ask
     while(True):
-    
+
        time.sleep(0.15)
        #Breakup UI to be nicer on eyes
        print("------------------------------------------------------------------\n"
