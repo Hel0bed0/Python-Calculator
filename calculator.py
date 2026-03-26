@@ -214,19 +214,20 @@ while(True):
              "4. Division\n"
              "5. Percentage\n"
              "6. Fraction\n"
-             "7. Exit\n")
+             "7. Powers\n"
+             "8. Exit\n")
     #Selector secondary (Cal)
               
     if cms1 == 2 :
         time.sleep(0.15)
         sel1 = int(input("Enter 1 - 7 (crashes if NaN): "))
         #Exit are-you-sure
-        if sel1 == 7 :
+        if sel1 == 8 :
             ex = int(input("Are you sure you want to exit? Enter 1 to exit: "))
             if ex == 1 :
                 exit()
         #Valid input checker
-        elif sel1 > 6 :
+        elif sel1 > 7 :
             print("IDK how to do that.")
         
         elif sel1 < 1 :
@@ -239,12 +240,22 @@ while(True):
             sel4 = int(input("Enter 1 - 2 : "))
         #user number input
         while(True):
-            print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
-            n1 = float(input("First Number (crashes if NaN): "))
-            print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
-            n2 = float(input("Second Number (crashes if NaN): "))
-            #Back function
-            print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+            if sel1 == 7 :
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+                n1 = float(input("First Number (multiply), (Optional(1 to not use)): "))
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+                n2 = float(input("Second Number (to power by)(req): " ))
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+                n3 = float(input("Power Of? :"))
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+
+            else :
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+                n1 = float(input("First Number (crashes if NaN): "))
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
+                n2 = float(input("Second Number (crashes if NaN): "))
+                #Back function
+                print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
             ba = int(input("1 - Calculate - Other - Cancel: "))
             if ba == 1 : 
                 break
@@ -279,6 +290,9 @@ while(True):
             
     #convert is in-print
 
+    def pwr(n2, n3):
+        return pow(n2,n3)
+
 #Breakup UI to be nicer on eyes
     print("////////////////////////////////////////////////////////////////////")
 #Output ans
@@ -305,6 +319,11 @@ while(True):
                 print("Fractions (Common Denominator)", n1,"/",n2, "=", Fraction(n1/n2).limit_denominator(1000))
             elif sel4 == 2:
                 print( "Fractions (Percentage)", n1 ,"/", n2 , "=", perfra(n1, n2),"%", )
+
+            #Powers
+        elif sel1 == 7:
+            print(n1, "*", n2, "to the power of", n3, "=", n1 * pwr(n2, n3))
+
 
     elif cms1 == 1 :
         if sel5 == 1:
