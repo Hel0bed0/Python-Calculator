@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#↑↑ use python3 to run code ↑↑
+#↑↑ to use python3 to run code ↑↑
 
 #Time
 import time
@@ -31,7 +31,6 @@ ytm = 0.9144
 ytmi = 0.0005681818
 itf = 12
 itm = 0.0254
-ktf = 0
 ktf2 = 1.8
 ktf3 = 32
 n10 = 100
@@ -63,8 +62,14 @@ while(True):
           "|====================|\n")
     print("1 - Convert\n"
           "2 - Calculate\n")
+
     cms1 = int(input("Enter: "))
     print("OK:",cms1,"|")
+
+    if cms1 > 1 :
+        print("Nothing Selected")
+    elif cms1 < 2 :
+        print("Nothing Selected")
 
     #Selector (Con)
     if cms1 == 1 :
@@ -175,16 +180,15 @@ while(True):
                               "1. KPH \n"
                               "2. MPH \n"
                               "3. M/S \n")
+                    else :
+                        print("Nothing Selected")
             
                 #ask value           
                 sel3 = int(input("Enter Second Unit: "))
                 print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
-                print("|                                                                  |")
-                print("                       OK:",sel3)
-                print("|                                                                  |")
+                print("Log:",sel3)
                 print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
-                print("Value to Convert: ")
-                n1 = float(input("Enter Value: "))
+                n1 = float(input("Value to Convert: "))
                 print("→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←→←")
                 ok2 = int(input("1 - Convert - Other - Cancel: "))
                 if ok2 == 1 :
@@ -194,7 +198,7 @@ while(True):
             if debug == 1 :
                 print("debug:]")
         #Tell selected
-        print(sel5, "|", sel2,"|",sel3,)
+        print("Log:", sel5, "|", sel2,"|",sel3,)
 
 #Calculator sel master
     if debug == 1 :
@@ -264,32 +268,8 @@ while(True):
     if debug == 1 :
         print("debug")
 
-#Percentages
-    if cms1 == 2 :
-        if sel1 == 5 :
-            def calper(n2, n10):
-                return n2 / n10
-            np = calper(n2, n10)
 #Calculator
-    if cms1 == 2 :
-        def add(n1, n2):
-            return n1 + n2
-    
-        def sub(n1, n2):
-            return n1 - n2
-    
-        def mul(n1, n2):
-            return n1 * n2
-    
-        def div(n1, n2):
-            return n1 / n2
-    
-        def per(n1, np):
-            return n1 * np
-            
-        def perfra(n1, n2):
-            return n10 * n1/n2
-#Fractions common denominator is built into the print function
+    #calculate is in-print
 #Converter
     if cms1 == 1 :
     
@@ -297,7 +277,7 @@ while(True):
         if debug == 1 :
             print("debug:]")
             
-#convert is in-print
+    #convert is in-print
 
 #Breakup UI to be nicer on eyes
     print("////////////////////////////////////////////////////////////////////")
@@ -305,19 +285,20 @@ while(True):
     time.sleep(0.15)
     if cms1 == 2 :
         if sel1 == 1:
-            print(n1, "+", n2, "=", add(n1, n2))
+            print(n1, "+", n2, "=", n1 + n2)
     
         elif sel1 == 2:
-           print(n1, "-", n2, "=", sub(n1, n2))
+           print(n1, "-", n2, "=", n1 - n2)
     
         elif sel1 == 3:
-            print(n1, "*", n2, "=", mul(n1, n2))
+            print(n1, "*", n2, "=", n1 * n2)
     
         elif sel1 == 4:
-            print(n1, "/", n2, "=", div(n1, n2))
+            print(n1, "/", n2, "=", n1/n2 )
     
         elif sel1 == 5:
-            print(n1, "%", n2, "=", per(n1, np))
+            print(n1, "%", n2, "=", n10 * n1/n2)
+
             #Fractions
         elif sel1 == 6:
             if sel4 == 1:
@@ -325,7 +306,7 @@ while(True):
             elif sel4 == 2:
                 print( "Fractions (Percentage)", n1 ,"/", n2 , "=", perfra(n1, n2),"%", )
 
-    if cms1 == 1 :
+    elif cms1 == 1 :
         if sel5 == 1:
     
             if sel2 == 1:
@@ -412,7 +393,8 @@ while(True):
                     print(n1, "Ft/S is", n1 * fstmh, "MPH" ,)
                 elif sel3 == 3 :
                     print(n1, "Ft/S is", n1 * ftm, "M/S" ,)
-            
+    else :
+        print("Nothing Selected")
                 
 
 #Breakup UI to be nicer on eyes
