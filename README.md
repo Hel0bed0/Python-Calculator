@@ -16,7 +16,9 @@ Features:
 
 7. Unit Conversion
 
-8. Exit Command
+8. Powers
+
+9. Exit Command
 
 Python Calculator Runs in the command line
 
