@@ -24,4 +24,4 @@ Python Calculator Runs in the command line
 
 Make sure python calculator is set as "Executable as Program" in file properties
 
-If it dosen't open try copy/pasting the file location in terminal.
+If it dosen't open try copy/pasting the file location in terminal without quotation marks.
